@@ -114,11 +114,11 @@ export function ContactSection() {
             <div className="text-center">
               <p className="text-gray-600 mb-4">O escríbenos directamente:</p>
               <a 
-                href="mailto:hola@pindd.xyz" 
+                href="mailto:contacto@pindd.xyz" 
                 className="flex items-center justify-center gap-2 text-[#756BFF] hover:underline"
               >
                 <Mail className="w-5 h-5" />
-                hola@pindd.xyz
+                contacto@pindd.xyz
               </a>
             </div>
           </motion.div>

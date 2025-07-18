@@ -10,7 +10,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen text-black">
       <HeroSection />
       <ServicesSection />
       <AboutSection />
