@@ -8,8 +8,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <span className="text-xl font-bold">
-              pindd<span className="accent-text">.xyz</span>
+            <span className="text-2xl font-bold">
+              pindd<span className="text-[12px] accent-text">.xyz</span>
             </span>
             <p className="text-gray-400 mt-2">© 2025 pindd.xyz - Todos los derechos reservados</p>
           </div>

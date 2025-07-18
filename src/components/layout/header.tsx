@@ -39,7 +39,7 @@ export function Header() {
               Nosotros
             </a>
             <Button
-              className="bg-[#756BFF] hover:bg-[#6B61FF] text-white btn-hover rounded-lg"
+              className=" text-white btn-hover rounded-lg"
               onClick={() =>
                 document
                   .getElementById("contacto")
@@ -48,12 +48,6 @@ export function Header() {
             >
               Contacto
             </Button>
-            <a
-              href="#contacto"
-              className="text-gray-700 hover:text-black transition-colors"
-            >
-              Contacto
-            </a>
           </div>
         </div>
       </div>
