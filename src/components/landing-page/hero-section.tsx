@@ -1,12 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Code } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerChildren } from "../constants/animations";
 import PersonIllustration from "../assets/svg/person-illustration";
 
 export function HeroSection() {
+  // Dynamic message that can be easily updated for latest news/highlights
+  const dynamicMessage = "Estamos en wplace.live, orgullosamente en Tampico 🌮";
+
   return (
     <section id="inicio" className="relative pt-24 pb-20 overflow-hidden">
       <motion.div
@@ -53,17 +55,34 @@ export function HeroSection() {
             >
               <Button
                 size="lg"
+                onClick={() =>
+                  document
+                    .getElementById("contacto")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 className="bg-black hover:bg-gray-800 text-white btn-hover rounded-lg text-lg px-8 py-6"
               >
                 Quiero una página web
               </Button>
               <Button
                 variant="outline"
+                onClick={() =>
+                  document
+                    .getElementById("contacto")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 size="lg"
                 className="border-black text-black btn-hover rounded-lg text-lg px-8 py-6"
               >
                 Quiero algo más
               </Button>
+            </motion.div>
+
+            <motion.div
+              className="inline-flex items-center bg-[#756BFF]/10 text-[#756BFF] px-4 py-2 rounded-full text-sm font-medium border border-[#756BFF]/20"
+              variants={fadeInUp}
+            >
+              ✨ {dynamicMessage}
             </motion.div>
           </motion.div>
 
@@ -75,8 +94,7 @@ export function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="scale-85 -translate-x-10 translate-y-5">
-
-            <PersonIllustration/>
+              <PersonIllustration />
             </div>
             {/* <div className="w-96 h-96 bg-gradient-to-br from-[#756BFF] to-[#9D95FF] rounded-full flex items-center justify-center">
               <Code className="w-32 h-32 text-white" />

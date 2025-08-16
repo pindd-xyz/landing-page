@@ -152,7 +152,7 @@ export function ContactSection() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <div className="text-center">
+            {/* <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">
                 ¿Prefieres hablar directamente?
               </h3>
@@ -170,7 +170,7 @@ export function ContactSection() {
               >
                 Agendar llamada
               </Button>
-            </div>
+            </div> */}
 
             <div className="text-center">
               <p className="text-gray-600 mb-4">O escríbenos directamente:</p>
