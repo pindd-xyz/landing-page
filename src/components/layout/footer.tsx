@@ -15,7 +15,7 @@ export function Footer() {
           </div>
           
           <div className="flex space-x-6">
-            <a 
+            {/* <a 
               href="https://github.com/pindd-xyz" 
               className="text-gray-400 hover:text-white transition-colors"
               target="_blank"
@@ -30,7 +30,7 @@ export function Footer() {
               rel="noopener noreferrer"
             >
               <Twitter className="w-6 h-6" />
-            </a>
+            </a> */}
             <a 
               href="https://linkedin.com/company/pindd-xyz" 
               className="text-gray-400 hover:text-white transition-colors"
