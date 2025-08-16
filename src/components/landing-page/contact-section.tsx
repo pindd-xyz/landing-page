@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail } from "lucide-react";
+import { Mail, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft } from "../constants/animations";
 import { useState } from "react";
@@ -22,18 +22,24 @@ export function ContactSection() {
     email: "",
     idea: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const sendEmail = async () => {
       try {
         await emailjs.send(
-          "YOUR_SERVICE_ID",
-          "YOUR_TEMPLATE_ID",
-          {},
+          "service_n5ejn1w",
+          "template_m3fobws",
           {
-            publicKey: "YOUR_PUBLIC_KEY",
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.idea,
+          },
+          {
+            publicKey: "user_2i8gRZSzOtAyyQpyMJilx",
           }
         );
         alert("¡Gracias! Te contactaremos pronto.");
@@ -45,6 +51,8 @@ export function ContactSection() {
         }
 
         console.log("ERROR", err);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -120,9 +128,17 @@ export function ContactSection() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-[#756BFF] hover:bg-[#6B61FF] text-white btn-hover"
+                    disabled={isLoading}
+                    className="w-full bg-[#756BFF] hover:bg-[#6B61FF] text-white btn-hover disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Enviar proyecto
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Enviando...
+                      </>
+                    ) : (
+                      "Enviar proyecto"
+                    )}
                   </Button>
                 </form>
               </CardContent>
