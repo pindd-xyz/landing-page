@@ -10,11 +10,12 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Loader2 } from "lucide-react";
+import { Mail, Loader2, MessageCirclePlus } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft } from "../constants/animations";
 import { useState } from "react";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
+import { whatsappChatLink } from "../constants/contact-info";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -152,28 +153,27 @@ export function ContactSection() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {/* <div className="text-center">
+            <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">
                 ¿Prefieres hablar directamente?
               </h3>
               <p className="text-gray-600 mb-6">
-                Agenda una llamada gratuita de 30 minutos para discutir tu
-                proyecto.
+                Envianos un mensaje y cuéntanos qué podemos hacer por ti.
               </p>
               <Button
                 variant="outline"
                 size="lg"
                 className="border-[#756BFF] text-[#756BFF] hover:bg-[#756BFF] hover:text-white btn-hover"
-                onClick={() =>
-                  window.open("https://calendly.com/pindd-xyz", "_blank")
-                }
+                onClick={() => window.open(whatsappChatLink, "_blank")}
               >
-                Agendar llamada
+                Escribir a WhatsApp {<MessageCirclePlus />}
               </Button>
-            </div> */}
+            </div>
 
             <div className="text-center">
-              <p className="text-gray-600 mb-4">O escríbenos directamente:</p>
+              <p className="text-gray-600 mb-4">
+                O escríbenos a nuestro correo:
+              </p>
               <a
                 href="mailto:contacto@pindd.xyz"
                 className="flex items-center justify-center gap-2 text-[#756BFF] hover:underline"

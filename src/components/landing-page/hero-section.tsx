@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerChildren } from "../constants/animations";
 import PersonIllustration from "../assets/svg/person-illustration";
+import { whatsappChatLink } from "../constants/contact-info";
 
 export function HeroSection() {
   // Dynamic message that can be easily updated for latest news/highlights
@@ -55,11 +56,7 @@ export function HeroSection() {
             >
               <Button
                 size="lg"
-                onClick={() =>
-                  document
-                    .getElementById("contacto")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => window.open(whatsappChatLink, "_blank")}
                 className="bg-black hover:bg-gray-800 text-white btn-hover rounded-lg text-lg px-8 py-6"
               >
                 Quiero una página web
